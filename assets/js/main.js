@@ -148,16 +148,6 @@
       .catch(err => {
         console.warn('Failed to load recent posts:', err);
         // Fallback static rendering if fetch fails on local file protocol without server
-        widgetContainer.innerHTML = `
-          <li class="post-mini-item">
-            <a href="blogs/hello-world.html">welcome to my space</a>
-            <span class="post-mini-date">2026-07-28</span>
-          </li>
-          <li class="post-mini-item">
-            <a href="blogs/cybersecurity-notes.html">minimalist threat modeling & zero-trust notes</a>
-            <span class="post-mini-date">2026-07-20</span>
-          </li>
-        `;
       });
   }
 

@@ -54,7 +54,7 @@
 
   function renderFrame() {
     const isDark = document.documentElement.getAttribute('data-theme') === 'dark';
-    
+
     if (!isDark) {
       // Light mode: clear canvas and stop drawing loop
       ctx.clearRect(0, 0, canvas.width, canvas.height);
