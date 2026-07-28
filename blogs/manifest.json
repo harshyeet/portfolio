@@ -1,14 +1,1 @@
-[
-  {
-    "filename": "hello-world.html",
-    "title": "welcome to my space",
-    "date": "2026-07-28",
-    "summary": "an initial note on minimalism, liquid glass aesthetics, and security notes."
-  },
-  {
-    "filename": "cybersecurity-notes.html",
-    "title": "minimalist threat modeling & zero-trust notes",
-    "date": "2026-07-20",
-    "summary": "thoughts on lightweight security postures, pgp validation, and attack surface reduction."
-  }
-]
+[]
