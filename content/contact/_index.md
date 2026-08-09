@@ -1,7 +1,7 @@
 ---
 title: "contact"
 description: "feel free to reach out for security research, collaboration, or general queries."
-primary_email: "hershhitt@proton.me"
+primary_email: "hershitt@proton.me"
 secondary_email: "hershhitt@gmail.com"
 twitter_handle: "@hershhitt"
 twitter_url: "https://x.com/hershhitt"
