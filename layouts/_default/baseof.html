@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+
+{{- partial "head.html" . -}}
+
+<body>
+  <!-- Canvas for dark mode animated gradient & cursor distortion -->
+  <canvas id="bg-canvas"></canvas>
+
+  <!-- Persistent Liquid Glass Header -->
+  {{- partial "header.html" . -}}
+
+  <!-- Main Content Container -->
+  <main class="main-container">
+    {{- block "main" . }}{{- end }}
+  </main>
+
+  <!-- Footer -->
+  {{- partial "footer.html" . -}}
+
+  <!-- SVG Filter for Liquid Glass Switcher -->
+  {{- partial "switcher-filter.html" . -}}
+
+  <script src="{{ "assets/js/canvas-bg.js" | relURL }}"></script>
+  <script src="{{ "assets/js/main.js" | relURL }}"></script>
+</body>
+
+</html>
