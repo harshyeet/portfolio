@@ -1,0 +1,33 @@
+{{ define "main" }}
+<div class="home-grid">
+  <!-- Left Column: Bio & Intro -->
+  <section class="bio-section">
+    <h1 class="bio-title">{{ .Params.bio_title | default "hello! I'm harshit :)" }}</h1>
+    <div class="bio-subtitle">{{ .Params.bio_subtitle | default "computer nerd and cybersec enthusiast" }}</div>
+    <div class="bio-text">
+      {{ .Content }}
+    </div>
+  </section>
+
+  <!-- Right Column: Recent Posts Widget -->
+  <aside class="recent-posts-card">
+    <div class="card-title">
+      <span>recent posts</span>
+      <a href="{{ "blogs/" | relURL }}">view all &rarr;</a>
+    </div>
+    <ul class="post-mini-list" id="recent-posts-list">
+      {{ $blogs := (where .Site.RegularPages "Section" "blogs").ByDate.Reverse }}
+      {{ if gt (len $blogs) 0 }}
+        {{ range first 3 $blogs }}
+        <li class="post-mini-item">
+          <a href="{{ .RelPermalink }}">{{ .Title }}</a>
+          <span class="post-mini-date">{{ .Date.Format "2006-01-02" }}</span>
+        </li>
+        {{ end }}
+      {{ else }}
+        <li class="post-mini-item">no posts found</li>
+      {{ end }}
+    </ul>
+  </aside>
+</div>
+{{ end }}
