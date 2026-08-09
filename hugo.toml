@@ -5,7 +5,7 @@ disableKinds = ['taxonomy', 'term']
 
 [params]
   author = 'harshit'
-  description = 'personal website of harshit — security research, threat modeling, and minimalist web systems.'
+  description = 'professional dumbass.'
   logo_text = 'harshit'
   logo_dot = ':)'
   footer_text = 'brought to you by a lot of chicken'
