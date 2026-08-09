@@ -1,6 +1,6 @@
 ---
 title: "harshit :)"
-description: "personal website of harshit — security research, threat modeling, and minimalist web systems."
+description: "oh."
 bio_title: "hello! I'm harshit :)"
 bio_subtitle: "computer nerd and cybersec enthusiast"
 ---
