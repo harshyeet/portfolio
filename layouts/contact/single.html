@@ -1,0 +1,55 @@
+{{ define "main" }}
+<div class="contact-container">
+  <div class="page-header">
+    <h1 class="page-title">{{ .Title }}</h1>
+    {{ with .Description }}<p class="page-desc">{{ . }}</p>{{ end }}
+  </div>
+
+  <div class="contact-card">
+    {{ $primaryEmail := .Params.primary_email | default .Site.Params.primary_email }}
+    {{ if $primaryEmail }}
+    <div class="contact-group">
+      <span class="contact-label">primary email</span>
+      <a href="mailto:{{ $primaryEmail }}" class="contact-value preserve-case">{{ $primaryEmail }}</a>
+    </div>
+    {{ end }}
+
+    {{ $secondaryEmail := .Params.secondary_email | default .Site.Params.secondary_email }}
+    {{ if $secondaryEmail }}
+    <div class="contact-group">
+      <span class="contact-label">secondary email</span>
+      <a href="mailto:{{ $secondaryEmail }}" class="contact-value preserve-case">{{ $secondaryEmail }}</a>
+    </div>
+    {{ end }}
+
+    {{ $twitterUrl := .Params.twitter_url | default .Site.Params.twitter_url }}
+    {{ $twitterHandle := .Params.twitter_handle | default .Site.Params.twitter_handle }}
+    {{ if and $twitterUrl $twitterHandle }}
+    <div class="contact-group">
+      <span class="contact-label">x / twitter</span>
+      <a href="{{ $twitterUrl }}" target="_blank" rel="noopener noreferrer" class="contact-value preserve-case">{{ $twitterHandle }}</a>
+    </div>
+    {{ end }}
+
+    {{ $pgpKey := .Params.pgp_key_path | default .Site.Params.pgp_key_path }}
+    {{ if $pgpKey }}
+    <div class="contact-group" style="margin-top: 0.5rem;">
+      <span class="contact-label">pgp public key</span>
+      <a href="{{ (strings.TrimPrefix "/" $pgpKey) | relURL }}" target="_blank" class="pgp-btn">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect>
+          <path d="M7 11V7a5 5 0 0 1 10 0v4"></path>
+        </svg>
+        <span>view pgp key</span>
+      </a>
+    </div>
+    {{ end }}
+  </div>
+
+  {{ with .Content }}
+  <div class="contact-body" style="margin-top: 2rem;">
+    {{ . }}
+  </div>
+  {{ end }}
+</div>
+{{ end }}
