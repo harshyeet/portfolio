@@ -1,6 +1,6 @@
 baseURL = 'https://harshyeet.github.io/portfolio/'
 defaultContentLanguage = 'en'
-title = 'harshit — cybersec & development'
+title = 'harshit :)'
 disableKinds = ['taxonomy', 'term']
 
 [params]
