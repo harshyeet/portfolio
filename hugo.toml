@@ -1,0 +1,27 @@
+baseURL = 'https://harshyeet.github.io/portfolio/'
+defaultContentLanguage = 'en'
+title = 'harshit — cybersec & development'
+disableKinds = ['taxonomy', 'term']
+
+[params]
+  author = 'harshit'
+  description = 'personal website of harshit — security research, threat modeling, and minimalist web systems.'
+  logo_text = 'harshit'
+  logo_dot = ':)'
+  footer_text = 'brought to you by a lot of chicken'
+  github_url = 'https://github.com/harshyeet'
+  primary_email = 'hershhitt@proton.me'
+  secondary_email = 'hershhitt@gmail.com'
+  twitter_handle = '@hershhitt'
+  twitter_url = 'https://x.com/hershhitt'
+  pgp_key_path = 'pgp_key.txt.asc'
+
+[markup]
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true
+  [markup.highlight]
+    guessSyntax = true
+    lineNos = false
+    noClasses = true
+    style = 'monokai'
