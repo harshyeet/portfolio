@@ -15,7 +15,7 @@ Sounds pretty secure, right? Except once you actually look at how Instagram Web 
 
 ## How "View Once" Was Supposed to Work
 
-Instagram's disappearing-media system runs on an internal subsystem called **Raven** (Meta's cute lil' internal name for ephemeral camera and messaging features).
+Instagram's disappearing-media system runs on an internal subsystem called **Raven** (Meta's cute little internal name for ephemeral camera and messaging features).
 
 ```
 Sender (Mobile) ─────────► Meta Backend (Raven Service)
