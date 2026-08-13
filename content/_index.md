@@ -1,7 +1,7 @@
 ---
 title: "Harshit :)"
 description: "oh."
-bio_title: "hello! I'm harshit :)"
+bio_title: "hello! I'm Harshit :)"
 bio_subtitle: "computer nerd and cybersec enthusiast"
 ---
 
