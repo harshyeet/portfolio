@@ -2,6 +2,7 @@ baseURL = 'https://harshyeet.github.io/portfolio/'
 defaultContentLanguage = 'en'
 title = 'harshit :)'
 disableKinds = ['taxonomy', 'term']
+buildFuture = true
 
 [params]
   author = 'harshit'

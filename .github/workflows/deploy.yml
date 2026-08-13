@@ -43,9 +43,9 @@ jobs:
           HUGO_ENVIRONMENT: production
         run: |
           if [ -n "${{ steps.pages.base_url }}" ]; then
-            hugo --gc --minify --baseURL "${{ steps.pages.base_url }}/"
+            hugo --gc --minify --buildFuture --baseURL "${{ steps.pages.base_url }}/"
           else
-            hugo --gc --minify
+            hugo --gc --minify --buildFuture
           fi
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
