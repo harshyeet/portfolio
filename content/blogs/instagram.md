@@ -1,6 +1,6 @@
 ---
 title: "Vanishing Acts and Leaky Payloads: How Instagram Web Handed Over \"View Once\" Media in Plain Sight"
-date: 14/08/2026
+date: 2026-08-14
 draft: false
 summary: "Exposing Instagram's view-once mechanism."
 ---
