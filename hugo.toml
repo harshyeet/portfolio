@@ -1,13 +1,13 @@
 baseURL = 'https://harshyeet.github.io/portfolio/'
 defaultContentLanguage = 'en'
-title = 'harshit :)'
+title = 'Harshit :)'
 disableKinds = ['taxonomy', 'term']
 buildFuture = true
 
 [params]
-  author = 'harshit'
+  author = 'Harshit'
   description = 'professional dumbass.'
-  logo_text = 'harshit'
+  logo_text = 'Harshit'
   logo_dot = ':)'
   footer_text = 'brought to you by a lot of chicken'
   github_url = 'https://github.com/harshyeet'
