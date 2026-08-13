@@ -23,7 +23,7 @@
     </fieldset>
 
     <!-- Logo -->
-    <a href="{{ site.Home.RelPermalink }}" class="logo">{{ .Site.Params.logo_text | default "Harshit" }}<span class="logo-dot">{{ .Site.Params.logo_dot | default ":)" }}</span></a>
+    <a href="{{ site.Home.RelPermalink }}" class="logo">{{ site.Params.logo_text | default "Harshit" }}<span class="logo-dot">{{ site.Params.logo_dot | default ":)" }}</span></a>
 
     <!-- Desktop Nav Items -->
     <nav class="desktop-nav">
@@ -34,7 +34,7 @@
         <li class="nav-item"><span class="nav-separator">/</span></li>
         <li class="nav-item"><a href="{{ "contact/" | relURL }}" class="nav-link{{ if or (eq .Section "contact") (in .RelPermalink "/contact") }} active{{ end }}">contact</a></li>
         <li class="nav-item"><span class="nav-separator">/</span></li>
-        <li class="nav-item"><a href="{{ .Site.Params.github_url | default "https://github.com/harshyeet" }}" target="_blank" rel="noopener noreferrer" class="nav-link">github</a></li>
+        <li class="nav-item"><a href="{{ site.Params.github_url | default "https://github.com/harshyeet" }}" target="_blank" rel="noopener noreferrer" class="nav-link">github</a></li>
       </ul>
     </nav>
 
@@ -51,7 +51,7 @@
         <li class="mobile-nav-item"><a href="{{ site.Home.RelPermalink }}" class="nav-link{{ if .IsHome }} active{{ end }}">home</a></li>
         <li class="mobile-nav-item"><a href="{{ "blogs/" | relURL }}" class="nav-link{{ if or (eq .Section "blogs") (in .RelPermalink "/blogs") }} active{{ end }}">blogs</a></li>
         <li class="mobile-nav-item"><a href="{{ "contact/" | relURL }}" class="nav-link{{ if or (eq .Section "contact") (in .RelPermalink "/contact") }} active{{ end }}">contact</a></li>
-        <li class="mobile-nav-item"><a href="{{ .Site.Params.github_url | default "https://github.com/harshyeet" }}" target="_blank" rel="noopener noreferrer" class="nav-link">github</a></li>
+        <li class="mobile-nav-item"><a href="{{ site.Params.github_url | default "https://github.com/harshyeet" }}" target="_blank" rel="noopener noreferrer" class="nav-link">github</a></li>
       </ul>
     </div>
   </header>
