@@ -101,18 +101,12 @@ body {
   background-color: var(--bg-color);
   color: var(--text-main);
   line-height: 1.65;
-  text-transform: lowercase; /* Universal lowercase rule */
   min-height: 100vh;
   display: flex;
   flex-direction: column;
   position: relative;
   overflow-x: hidden;
   transition: background-color 0.4s ease, color 0.4s ease;
-}
-
-/* Exceptions to lowercase for functional code/emails/PGP */
-.preserve-case, code, pre, .pgp-block, input, textarea {
-  text-transform: none !important;
 }
 
 /* Headings use transitional serif */
@@ -883,7 +877,6 @@ a:hover {
   font-size: 0.85rem;
   font-family: var(--font-mono);
   color: var(--text-dim);
-  text-transform: lowercase;
 }
 
 .contact-value {
