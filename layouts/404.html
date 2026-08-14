@@ -1,0 +1,165 @@
+{{ define "main" }}
+<div class="p404-container">
+  
+  <!-- Top Banner -->
+  <div class="p404-banner-badge">
+    <span class="p404-badge-text">🚨 PUBLIC SERVICE ANNOUNCEMENT: 404 NOT FOUND 🚨</span>
+  </div>
+
+  <div class="p404-poster">
+    
+    <!-- Big STOP Headline -->
+    <div class="p404-headline-group">
+      <h1 class="p404-stop-title">STOP!!!!</h1>
+      <p class="p404-question">did u type the wrong url yet ????????????</p>
+      <p class="p404-sub-question">oh. u didn't??? okay... here's ur chance...</p>
+    </div>
+
+    <!-- Main Collage Grid / Post Content -->
+    <div class="p404-grid">
+      
+      <!-- Left Column: The Red Circle Cat Meme -->
+      <div class="p404-panel p404-panel-cat">
+        <div class="p404-speech-bubble">
+          <span>twin. Twin get up.</span>
+          <strong>WE (yes <u>WE</u>) took a wrong turn</strong>
+        </div>
+        
+        <div class="p404-cat-circle-wrap">
+          <div class="p404-red-circle">
+            <img src="{{ "assets/images/cat.png" | relURL }}" alt="Surprised Cat Meme" class="p404-cat-img" />
+          </div>
+          <!-- Sketchy arrow pointing to cat -->
+          <svg class="p404-sketchy-arrow" viewBox="0 0 100 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M10 20 C 40 10, 70 30, 85 65" stroke="#ef4444" stroke-width="6" stroke-linecap="round"/>
+            <path d="M70 65 L 85 65 L 85 50" stroke="#ef4444" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+          <span class="p404-arrow-caption">&lt;&lt;&lt; they r looking 4 this missing page!</span>
+        </div>
+
+        <div class="p404-mini-tag">
+          <span>Do u see this... 👀👀</span>
+        </div>
+      </div>
+
+      <!-- Right Column: Status & ASMR Card -->
+      <div class="p404-panel p404-panel-fact">
+        <div class="p404-fact-header">
+          <span class="p404-fact-label">STATUS CODE:</span>
+        </div>
+
+        <div class="p404-status-banner">
+          <div class="p404-status-emoji">⚠️</div>
+          <h2 class="p404-status-text">404 NOT FOUND</h2>
+        </div>
+
+        <p class="p404-fact-desc">
+          this route does not exist in cyberspace. here's how u can stay safe + find real posts :)
+        </p>
+
+        <!-- Interactive ASMR / Squish Box -->
+        <div class="p404-asmr-box">
+          <span class="p404-asmr-title">cue the asmr... 🎧</span>
+          <button id="p404-squish-btn" class="p404-squish-btn" type="button">
+            <span>✨ SQUISH THE 404 BUG ✨</span>
+          </button>
+          <span class="p404-squish-hint">(put ur headphones on babe &amp; click it)</span>
+        </div>
+
+      </div>
+
+    </div>
+
+    <!-- Official Declaration -->
+    <div class="p404-official-box">
+      <p>
+        we want 2 inform all cyber-explorers (and everyone else) that there is no file here. please proceed immediately 2 safety.
+      </p>
+    </div>
+
+    <!-- Big Action Buttons -->
+    <div class="p404-action-buttons">
+      <a href="{{ site.Home.RelPermalink }}" class="p404-btn p404-btn-home">
+        <span>🏠 TAKE ME HOME (BEFORE IT GETS WEIRD)</span>
+      </a>
+      <a href="{{ "blogs/" | relURL }}" class="p404-btn p404-btn-blogs">
+        <span>📖 READ THE BLOGS INSTEAD &rarr;</span>
+      </a>
+    </div>
+
+  </div>
+
+</div>
+
+<!-- Interactive Confetti & Audio Synthesizer Script -->
+<script>
+  (function() {
+    const squishBtn = document.getElementById('p404-squish-btn');
+    if (!squishBtn) return;
+
+    let audioCtx = null;
+    const emojis = ['🛑', '👀', '✨', '🐱', '🐛', '🚨', '🍕', '404'];
+
+    function playMemeSound() {
+      try {
+        const AudioContext = window.AudioContext || window.webkitAudioContext;
+        if (!audioCtx) audioCtx = new AudioContext();
+        if (audioCtx.state === 'suspended') audioCtx.resume();
+
+        const osc = audioCtx.createOscillator();
+        const gain = audioCtx.createGain();
+
+        // Fun boing / bubble synth sound
+        osc.type = 'sine';
+        const startFreq = 220 + Math.random() * 300;
+        osc.frequency.setValueAtTime(startFreq, audioCtx.currentTime);
+        osc.frequency.exponentialRampToValueAtTime(startFreq * 2.2, audioCtx.currentTime + 0.18);
+        osc.frequency.exponentialRampToValueAtTime(startFreq * 0.7, audioCtx.currentTime + 0.35);
+
+        gain.gain.setValueAtTime(0.4, audioCtx.currentTime);
+        gain.gain.exponentialRampToValueAtTime(0.01, audioCtx.currentTime + 0.35);
+
+        osc.connect(gain);
+        gain.connect(audioCtx.destination);
+
+        osc.start();
+        osc.stop(audioCtx.currentTime + 0.36);
+      } catch (e) {
+        console.log('Audio disabled', e);
+      }
+    }
+
+    function spawnFloatingEmoji(e) {
+      const rect = squishBtn.getBoundingClientRect();
+      const x = e.clientX || (rect.left + rect.width / 2);
+      const y = e.clientY || (rect.top + rect.height / 2);
+
+      for (let i = 0; i < 6; i++) {
+        const span = document.createElement('span');
+        span.className = 'p404-floating-emoji';
+        span.textContent = emojis[Math.floor(Math.random() * emojis.length)];
+        
+        const offsetX = (Math.random() - 0.5) * 140;
+        const offsetY = (Math.random() - 0.5) * 140;
+        
+        span.style.left = (x + offsetX) + 'px';
+        span.style.top = (y + offsetY) + 'px';
+        document.body.appendChild(span);
+
+        setTimeout(() => {
+          span.remove();
+        }, 1200);
+      }
+    }
+
+    squishBtn.addEventListener('click', function(e) {
+      playMemeSound();
+      spawnFloatingEmoji(e);
+
+      // Temporary button bounce
+      squishBtn.classList.add('squished');
+      setTimeout(() => squishBtn.classList.remove('squished'), 200);
+    });
+  })();
+</script>
+{{ end }}
