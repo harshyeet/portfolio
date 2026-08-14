@@ -2,9 +2,11 @@
 title: "Harshit :)"
 description: "oh."
 bio_title: "hello! I'm Harshit :)"
-bio_subtitle: "computer nerd and cybersec enthusiast"
+bio_subtitle: "i like computers, breaking things, and figuring out why they broke."
 ---
 
-apart from being a computer nerd, i like listening to R&B music, cooking and eating, and watching tv shows and documentaries.
+i'm a curious person who tends to get interested in a little bit of everything. i'm into R&B, cooking and eating, TV shows, documentaries, and generally finding things that make me stop and think.
 
-having unrestricted internet access since a young age naturally exposed me not just to the wonders of the internet, but also how to break stuff on here; so finally around 2020, i started getting into programming and different aspects of cybersec. currently i am trying to enhance my skills in cybersec, trying to get better everyday with consistent efforts.
+i got into programming and cybersecurity around 2020, mostly because i was curious about how things worked underneath the surface. that curiosity hasn't really gone away. these days, i'm still learning, experimenting, and trying to get better at understanding — and occasionally breaking — the things i find interesting.
+
+this site is basically a little corner of the internet where i write about what i'm learning, things i've built, stuff i've broken, and whatever else i find interesting along the way.
