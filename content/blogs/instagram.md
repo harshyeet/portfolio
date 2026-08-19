@@ -233,6 +233,7 @@ None of this needed some crazy exotic engineering to fix. Just some basic defens
 | Jun 1, 2026 | Report submitted. |
 | Jul 9, 2026 | Sent a corrected, self-contained PoC along with an updated writeup and a PoC video.|
 | Jul 21, 2026 | Meta responds: classifies View Once as a "best-effort" feature, not a hard security control. |
+| Jul 28, 2026 | Issue resolved, confirmed through my own retesting. |
 | Aug 4, 2026 | Meta closes the case as "Informative," maintaining it isn't a valid security/privacy issue, and points to the "someone could always use modified firmware/external means/etc to screen-record" scenario as reasoning. |
 ---
 
